@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset='utf-8'>
+    <meta http-equiv='X-UA-Compatible' content='IE=edge'>
+    <title>Card Game/login</title>
+    <link rel = "icon" href="images/doraexpl.png" alt="game Icon">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
+    <style>
+        body 
+{
+    text-align: center;
+    color: rgb(90, 88, 199);
+    background-image: url("./images/background.jpg");
+    background-size:cover;
+    font-family:Calibri Light;
+}
+input
+{
+    display: block;
+    margin:0 auto;
+    margin-top:2%;
+    margin-bottom: 5%;
+    width:70%;
+    height: 35px;
+    border-radius: 30px;
+    background-color:white;
+    font-size: 20px;
+    color: rgb(90, 88, 199);
+}
+.form
+{
+    background-color: aliceblue;
+    opacity:.9 ;
+    width: 25%;
+    text-align: center;
+    display: inline-block;
+    margin-top: 8%;
+    font-size: 18px;
+    border-radius: 2%;
+}
+.label1
+{
+    display:block;
+    text-align:left;
+    margin-left: 15% ;
+    font-size: 25px;
+}
+#forget
+{
+    display:block;
+    text-align:right;
+    margin-right: 15% ;
+    text-decoration: none;
+    color: rgb(90, 88, 199);
+    margin-bottom: 5px;
+}
+#box
+{
+    display:inline;
+    margin-right:4px; 
+    width:auto;
+    height:auto;  
+    margin-left: -30%;
+}
+#p1
+{
+    text-decoration: underline solid #3A6EC3;
+    font-size: 50px;
+    font-family: Calibri;
+    margin-top:2%;  
+    margin-bottom: 10%;       
+}
+#Sign
+{
+    color:#8CACE0;
+}
+#btn
+{
+    color: white;
+    background-color: #3A6EC3;
+}
+#p2
+{
+    margin-top: 5px;
+}
+    </style>
+</head>
+
+<body>
+    <div class = "form">
+        <p id="p1">LOGIN</p>
+        <lable class="label1">Email</lable>
+        <input type="email" name=Email id="U_name">
+        <label class="label1">Password</label>
+        <input type="password" name=Password id="password">
+        <span></span>
+        <a href="mailto:elfeshy7@gmail.com" id="forget">Forget Password?</a>
+        <input type="checkbox" id="box" >Keep me signed in
+        <input type="submit" value="Sign in"id="btn" onclick="Remember_check_cookie();">
+        <label>_______________________________________</label>
+        <p id="p2">Don't have an account ? <a id="Sign" href="./regitration.html">Sign up</a></p>
+    </div >
+    <footer class="foot">
+        <h4>Made with 🤍 Copyright reserved 2022</h4>
+    </footer>
+    <script src="js/login.js">
+        
+    </script>
+</body>
+
+</html>

@@ -1,0 +1,223 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <title>Card Game</title>
+  <link rel="icon" href="images/doraexpl.png" alt="game Icon">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Dancing+Script:wght@500&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="styles/style.css">
+
+</head>
+
+<style>
+  * {
+    margin: 0;
+    padding: 0;
+  }
+
+  .grand {
+            display: none;
+        }  
+
+  .winner-parent {
+    background-image: url(images/fireworks.jpg);
+    background-size: center center;
+    width: 100%;
+    height: 100vh;
+    position: fixed;
+    left: 0;
+    top: 0;
+    bottom: 0;
+    right: 0;
+  }
+
+
+  .winner-child {
+    border-radius: 6px;
+    border-width: 5px;
+    width: 50%;
+    height: 10vh;
+    background-color: transparent;
+    z-index: 99;
+    position: absolute;
+    left: 26%;
+    top: 45%;
+  }
+
+  .winner-paragraph {
+    font-family: 'Dancing Script', cursive;
+    font-weight: bold;
+    font-weight: 700;
+    font-size: 100px;
+    color: rgb(3, 2, 26);
+    text-align: center;
+    padding-top: 7px;
+    }
+    .parent2 {
+            display: none;
+            background-color: rgba(41, 24, 24, 0.582);
+            width: 100%;
+            height: 100vh;
+            position: fixed;
+            left: 0;
+            top: 0;
+            bottom: 0;
+            right: 0;
+        }
+
+        .child2 {
+            border-radius: 6px;
+            border-width: 5px;
+            border-style: solid;
+            border-color: white;
+            width: 20%;
+            height: 30vh;
+            background-color: rgb(192, 181, 181);
+            box-shadow: 10px 10px 10px 5px #3a3946;
+            z-index: 99999999999;
+            position: relative;
+            left: 40%;
+            top: 30%;
+
+
+        }
+
+        .paragraph2 {
+            font-family: 'Dancing Script', cursive;
+            font-weight: bold;
+            font-weight: 700;
+            font-size: 45px;
+            color: rgb(233, 233, 241);
+            text-align: center;
+            margin-bottom: 40px;
+            background:rgba(20, 88, 119, 1);
+
+
+        }
+
+        .playAgain2 {
+            display: block;
+            padding: 10px 15px;
+            background-color: rgba(20, 88, 119, 1);
+            color: rgb(233, 233, 241);
+            font-family: 'Dancing Script', cursive;
+            font-weight: bold;
+            font-size: 20px;
+            border-radius: 5px;
+            border-color: rgb(1, 8, 26);
+            transition-duration: 0.2s;
+            cursor: pointer;
+            margin: 0 auto;
+        }
+        .playAgain2:hover{
+          background:green;
+          font-size: 30px;
+        }
+
+  
+</style>
+
+
+<body>
+  <div class="navbar">
+    <ul>
+      <li><a onclick="home()">Home</a></li>
+      <li><a href="./index.html">Logout</a></li>
+    </ul>
+    <div class="watchs_Score" id="Watchs"></div>
+    <div class="watchs_Score"> Right flips <p id="score"></p>
+    </div>
+    <div class="watchs_Fallier"> Wrong flips <p id="Failler"></p>
+    </div>
+    <div class="Total">Total <p id="total_Try"></p>
+    </div>
+
+  </div>
+
+  <!--- relaod pahe after time out -->
+  
+  <div id="parent" class="parent2">
+    <div class="child2">
+        <p class="paragraph2"> Game Over</p>
+        <button  type="button" class="playAgain2" onclick="location.reload();" >Play Again </button>
+    </div>
+</div>
+
+
+
+
+
+  <section id="cards" class="game">
+    <div class="card" data-cartoon="conan">
+      <img class="face" src="images/conan.jpg" alt="Conan Detective" />
+      <img class="back" src="images/doraexpl.png" alt="dora" />
+    </div>
+    <div class="card" data-cartoon="conan">
+      <img class="face" src="images/conan.jpg" alt="Conan Detective" />
+      <img class="back" src="images/doraexpl.png" alt="dora" />
+    </div>
+
+    <div class="card" data-cartoon="Danny">
+      <img class="face" src="images/danny.jpg" alt="Danny Phantom" />
+      <img class="back" src="images/doraexpl.png" alt="dora" />
+    </div>
+    <div class="card" data-cartoon="Danny">
+      <img class="face" src="images/danny.jpg" alt="Danny Phantom" />
+      <img class="back" src="images/doraexpl.png" alt="dora" />
+    </div>
+
+    <div class="card" data-cartoon="parents">
+      <img class="face" src="images/parents.jpg" alt="Fairly parents" />
+      <img class="back" src="images/doraexpl.png" alt="dora" />
+    </div>
+    <div class="card" data-cartoon="parents">
+      <img class="face" src="images/parents.jpg" alt="Fairly parents" />
+      <img class="back" src="images/doraexpl.png" alt="dora" />
+    </div>
+
+    <div class="card" data-cartoon="puffs">
+      <img class="face" src="images/powerPuffs.jpg" alt="Power Puffs" />
+      <img class="back" src="images/doraexpl.png" alt="dora" />
+    </div>
+    <div class="card" data-cartoon="puffs">
+      <img class="face" src="images/powerPuffs.jpg" alt="Power Puffs" />
+      <img class="back" src="images/doraexpl.png" alt="dora" />
+    </div>
+
+    <div class="card" data-cartoon="rangers">
+      <img class="face" src="images/powerRangers.jpg" alt="Power Rangers" />
+      <img class="back" src="images/doraexpl.png" alt="dora" />
+    </div>
+    <div class="card" data-cartoon="rangers">
+      <img class="face" src="images/powerRangers.jpg" alt="Power Rangers" />
+      <img class="back" src="images/doraexpl.png" alt="dora" />
+    </div>
+
+    <div class="card" data-cartoon="spies">
+      <img class="face" src="images/totallySpies.jpg" alt="Totally Spies" />
+      <img class="back" src="images/doraexpl.png" alt="dora" />
+    </div>
+    <div class="card" data-cartoon="spies">
+      <img class="face" src="images/totallySpies.jpg" alt="Totally Spies" />
+      <img class="back" src="images/doraexpl.png" alt="dora" />
+    </div>
+  </section>
+
+  <div class="grand" id="winner-div">
+    <div class="winner-parent">
+        <div class="winner-child">
+            <h1 class="winner-paragraph"> Winner 💌❤️‍🔥</h1>
+        </div>
+    </div>
+</div>
+
+  <footer class="foot">
+    <h4>Made with 🤍 Copyright reserved 2022</h4>
+  </footer>
+
+  <script src="js/script.js"></script>
+</body>
+
+</html>

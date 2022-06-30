@@ -1,0 +1,151 @@
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+
+body {
+  height: 100vh;
+  display: flex;
+  background-image: url(images/background.jpg);
+  
+}
+
+
+.game {
+  width: 640px;
+  height: 640px;
+  margin: auto;
+  display: flex;
+  flex-wrap: wrap;
+  perspective: 1000px;
+}
+
+.card {
+  width: calc(25% - 10px);
+  height: calc(33.333% - 10px);
+  margin: 5px;
+  position: relative;
+  transform: scale(1);
+  transform-style: preserve-3d;
+  transition: transform 0.5s;
+  box-shadow: 1px 1px 1px rgba(0,0,0,.3);
+}
+
+.card:active {
+  transform: scale(0.97);
+  transition: transform .2s;
+}
+
+.card.flip {
+  transform: rotateY(180deg);
+}
+
+.face,
+.back {
+  width: 100%;
+  height: 100%;
+  padding: 20px;
+  position: absolute;
+  border-radius: 5px;
+  background-color:rgb(77, 126, 167);
+  backface-visibility: hidden;
+}
+
+.face {
+  transform: rotateY(180deg);
+}
+
+
+/* footer */
+.foot {
+  position: fixed;
+  left: 0;
+  bottom: 0;
+  width: 100%;
+  color: white;
+  text-align: center;
+  letter-spacing: 3px;
+}
+
+/*fixed button*/
+.navbar{
+  position: fixed;
+  right: 0;
+  top: 30%;
+  padding: 15px  10px;
+  background-color: #f8f8f8;
+  border-radius: 5px 0 0 5px;
+  box-shadow: 0 0 20px 1px #d1cece;
+  z-index: 99999999;
+  width: 8%;
+  
+}
+
+.navbar ul{
+  
+  width:35%;
+  list-style-type:none;
+}
+
+.navbar a{
+  color:rgb(9, 10, 56);
+  text-decoration:none;
+  font-size: 25px;
+  font-weight:bold;
+  font-family: 'Dancing Script', cursive;
+  cursor: pointer;
+  padding-left: 25px;
+} 
+.navbar a:hover{
+
+padding-left:30px;
+padding-right:5px;
+color: rgb(9, 10, 56);
+font-size: 180%;
+border-radius: 5px;
+}
+
+.watchs_Score{
+margin-top: 10px;
+padding: 5px;
+font-size:20px;
+font-weight: bold;
+border: 10px;
+border-radius:2px;
+color: rgb(7, 224, 36);
+background:rgba(14, 65, 122, 0.76);
+width: 100%;
+text-align: center;
+border-radius:5px;
+}
+/* NUMBER Failler*/
+.watchs_Fallier{
+margin-top: 10px;
+padding: 5px;
+font-size:16px;
+font-weight: bold;
+border: 10px;
+border-radius:2px;
+color: rgb(221, 2, 2);
+background:rgba(14, 65, 122, 0.76);
+width: 100%;
+text-align: center;
+border-radius:5px;
+
+}
+
+.Total{
+margin-top: 10px;
+padding: 5px;
+font-size:16px;
+font-weight: bold;
+border: 10px;
+border-radius:2px;
+color: rgb(251, 253, 255);
+background:rgba(14, 65, 122, 0.76);;
+width: 100%;
+text-align: center;
+border-radius:5px;
+
+}

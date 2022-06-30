@@ -1,0 +1,212 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset='utf-8'>
+    <meta http-equiv='X-UA-Compatible' content='IE=edge'>
+    <title>Card Game/signup</title>
+    <link rel = "icon" href="images/doraexpl.png" alt="game Icon">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
+    <style>
+        body 
+{
+    text-align: center;
+    color: rgb(90, 88, 199);
+    background-image: url("./images/background.jpg");
+    background-size:cover;
+    font-family:Calibri Light;
+}
+.form
+{
+    background-color: white;
+    width: 35%;
+    text-align: center;
+    display: inline-block;
+    margin-top: 3.5%;
+    font-size: 18px;
+    border-radius: 2%;
+}
+input
+{
+    display: block;
+    margin:0 auto;
+    margin-top:2%;
+    margin-bottom: 3%;
+    width:70%;
+    height: 35px;
+    font-size: 20px;
+    color: black;
+    border-radius: 5px;
+    padding:1%;
+    font-size:15px;
+}
+#box
+{
+    display:inline;
+    margin-right:4px; 
+    width:auto;
+    height:auto;  
+    margin-left: -12%;
+    margin-top: 5px;
+}
+#p1
+{
+    font-size: 40px;
+    font-family: Calibri;
+    margin-top:2%;  
+    margin-bottom: 5%;       
+}
+#Signin
+{
+    color:#8CACE0;
+}
+#btn
+{
+    color: white;
+    background-color: #3A6EC3;
+}
+#p2
+{
+    margin-top: 5px;
+}
+#f
+{
+    color:black;
+    font-weight:bold;
+}
+#rad
+{
+    margin-left:-48%;
+    display:block;
+    height:50px;
+    position: relative;
+}
+.rad1
+{
+    width:auto;
+    height:auto;
+    display:inline;
+}
+#rad2
+{
+    width:auto;
+    height:auto;
+    display:block;
+    margin-bottom: 10px;
+}
+.form-popup
+ {
+    display: none;
+    position: fixed;
+    bottom: 10px;
+    right: 15px;
+ }
+#container
+ {
+     width:450px;
+     height:500px;
+     border-radius: 5px;
+ }
+a:hover
+{
+    cursor: pointer;
+}
+a
+{
+    text-decoration: underline;
+}
+#close
+{
+    color: white;
+    background-color: #3A6EC3;
+    display: block;
+    margin-left: 50%;
+    border-radius: 5px;
+}
+    </style>
+</head>
+<body>
+    <div class="form">
+        <p id="p1">CREATE ACCOUNT</p>
+        <input type="text" name=Name placeholder="Your Name">
+        <span></span>
+        <input type="email" name=Email placeholder="Your Email">
+        <span></span>
+        <input type="password" name=Password placeholder="Password">
+        <span></span>
+        <input type="password" name=repeatPassword placeholder="Repeat your password">
+        <span></span>
+        <input type="date" name=date>
+        <span></span>
+        <div id="rad">
+            <input type="radio" name=Gender class="rad1" value="Male">Male
+            <input type="radio" name=Gender class="rad1" value="Female">Female
+        </div>
+        <span id="rad2"></span>
+        <input type="checkbox" id="box">I agree all statements in <a onclick="openTerms()">Terms of services</a><br>
+        <span></span>
+        <input type="submit" value="Sign up" id="btn">
+        <p id="p2">Have already an account ? <a id="Signin" href="index.html">Sign in</a></p>
+    </div>
+    <footer class="foot">
+        <h4>Made with 🤍 Copyright reserved 2022</h4>
+    </footer>
+
+    <div class="form-popup" id="myForm">
+        <textarea id="container" readonly>
+Acceptance of Terms:
+These Terms of Service apply to all visitors and users of the SoundSnap website,including members who have paid a membership fee. By visiting and using the SoundSnap website you signify your assent to
+both these Terms of Service and the SoundSnap Privacy Policy.
+You affirm that you are either more than 18 years of age,
+an emancipated minor, or possess legal parental or guardian consent.
+You also represent that You are fully able and competent to agree to the terms, conditions, obligations, affirmations,
+representations, and warranties set out in these Terms of Service, and to abide by and comply with these Terms of Service.
+In any case, you affirm that you are over the age of 13, as the SoundSnap website is not intended for children under 13.
+Children under the age of 13 are not permitted to use SoundSnap and no part of the website is directed to children underthe age of 13.
+
+If you are under the age of 13 please do not use this website.
+If you download sounds from Soundsnap, you also do so under the terms of the Soundsnap License.
+If you do not agree with any of these terms you are not permitted to visit the website and use or purchase any of thecontent of SoundSnap.
+User Accounts & Submissions
+In order to access some features of the website, or download sounds, you will have to create an account. You may never
+use another's account
+without SoundSnap’s permission. When creating your account, you must provide accurate, up to date, and complete
+information. You are solely
+responsible for the activity that occurs on your account, and you must keep your account password(s), billing
+information, and username(s) secure.
+You must notify SoundSnap immediately of any breach of security or unauthorized use of your account(s). Although
+SoundSnap will not be liable
+for your losses caused by any unauthorized use of your account, you may be liable for the losses of SoundSnap or others due to any
+unauthorized uses and/or activity on your accounts.
+You agree we may verify your identity at any time during or after your use of our Website.
+You hereby authorize us to make any inquiries we consider necessary to validate your identity.
+This may include asking you for further information, requiring you to provide your full address,
+and/or requiring you to take steps to confirm ownership of your email address or financial instruments,
+or verifying information you provide against third party databases or through other sources.
+If: (1) you do not provide any requested information, as prompted, and/or (2) SoundSnap can’t verify your identity,
+then you agree that SoundSnap may refuse to allow access to our Website and Work.
+
+Billing and Subscriptions:
+If you choose to purchase a subscription to the website, we will collect information from you, including credit card information,
+needed to process your transaction and will charge your credit card accordingly. If you choose to subscribe to one of our subscription
+plans, your credit card or PayPal account will be charged based on the cost of the service as then set forth on the website from time to time.
+Your credit card information will be securely encrypted and stored only as a cryptographically-encoded token. Your charge will be authorized
+and charged at the time you order. You will be notified by email prior to the end of your chosen subscription term that your subscription will
+automatically renew. Your charge will be authorized and charged at the time you order. You will be notified by email prior to the end of your
+chosen subscription term that your subscription will automatically terminate and you will then have the opportunity to renew. Soundsnap
+reserves the right to change its fees or billing methods at any time. We will provide timely notice to the affected
+users of any such changes.
+You agree to promptly provide Soundsnap with any contact or billing information changes or updates, including but not limited to changes
+to your credit card number, billing address, and credit card expiration date.
+If you subscribe to our various subscription plans (“Subscriptions”), you will be charged subscription fees, which are listed on our website
+(“Subscription Fees”). The Subscription Fees will be billed according to your subscription plan (for example: weekly,monthly, or annually).
+The Subscriptions and their billing cycles will be listed and described on the website.
+            </textarea>
+       <button id="close" onclick="closeTerm()">close</button> 
+    </div>
+    <script src="js/regist.js"></script>
+</body>
+
+</html>
